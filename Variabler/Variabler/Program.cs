@@ -11,7 +11,7 @@ Console.WriteLine("Hej! Vad heter du??");
 
 name = Console.ReadLine();
 
-Console.WriteLine("Hej " + name + ", vad fint namn du har!");
+Console.WriteLine($"Hej {name}, vad fint namn du har!");
 
 Console.WriteLine();
 
@@ -23,7 +23,7 @@ Console.WriteLine("Vad ska jag multiplicera " + factor1 + " med?");
 
 factor2 = Int32.Parse(Console.ReadLine());
 
-Console.WriteLine(factor1 + " * " + factor2 + " = " + factor1 * factor2);
+Console.WriteLine($"{factor1} * {factor2} = {factor1 * factor2}");
 
 Console.WriteLine();
 
@@ -43,7 +43,7 @@ while (true)
 }
 
 Console.WriteLine();
-Console.WriteLine("Du " + name + ", ge mig ett slumpmässigt tal så ska jag berätta lite fakta om det.");
+Console.WriteLine($"Du {name}, ge mig ett slumpmässigt tal så ska jag berätta lite fakta om det.");
 
 randomNumber = Int32.Parse(Console.ReadLine());
 
@@ -58,8 +58,8 @@ else
     Console.WriteLine("Det talet är = 100");
 }
 
-Console.WriteLine("Hälften av talet är " + randomNumber / 2 + "!");
-Console.WriteLine("Dubblar man talet får man " + randomNumber * 2 + "!");
+Console.WriteLine($"Hälften av talet är {randomNumber/2}!");
+Console.WriteLine($"Dubblar man talet får man {randomNumber*2}!");
 
 Console.WriteLine();
 Console.WriteLine("Ge mig ännu ett tal!");
@@ -79,23 +79,22 @@ while(true){
     switch (operators)
     {
         case "+":
-            Console.WriteLine(factor1 + " + " + factor2 + " = " + (factor1 + factor2));
+            Console.WriteLine($"{factor1} + {factor2} = {factor1 + factor2}");
             break;
         case "-":
-            Console.WriteLine(factor1 + " - " + factor2 + " = " + (factor1 - factor2));
+            Console.WriteLine($"{factor1} - {factor2} = {factor1 - factor2}");
             break;
         case "*":
-            Console.WriteLine(factor1 + " * " + factor2 + " = " + (factor1 * factor2));
+            Console.WriteLine($"{factor1} * {factor2} = {factor1 * factor2}");
             break;
         case "/":
-            Console.WriteLine(factor1 + " / " + factor2 + " = " + (factor1 / factor2));
+            Console.WriteLine($"{factor1} / {factor2} = {factor1 / factor2}");
             break;
         default:
             Console.WriteLine("Det där är inte en matematisk symbol >:(");
             Console.WriteLine("Skriv en annan!");
             operators = Console.ReadLine();
             continue;
-           
     }
     break;
 }
